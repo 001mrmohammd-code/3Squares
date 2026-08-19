@@ -13,6 +13,9 @@ import os
 import logging
 import dj_database_url
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +37,8 @@ ALLOWED_HOSTS = [
     "www.3squares.ae",
     "threesquares.onrender.com",
     "127.0.0.1",
-    "localhost"
+    "localhost",
+    "threesquares-a4h7.onrender.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -159,9 +163,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = '3squaresid@gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '3squaresid@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-DEFAULT_FROM_EMAIL = '3squaresid@gmail.com'
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER', '3squaresid@gmail.com')
 
 if not EMAIL_HOST_PASSWORD:
     logger.warning('EMAIL_HOST_PASSWORD is not set! Email sending will fail with a 530 Authentication error.')
