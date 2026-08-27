@@ -211,6 +211,29 @@ def service_detail(request, slug):
                 '/static/main/images/customer_furniture2.png',
                 'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80'
             ]
+        },
+        'custom-mattresses': {
+            'title': 'Custom Mattresses',
+            'tag': 'Hospitality & Luxury',
+            'hero_image': '/static/main/images/custom_mattress_gal4.jpg',
+            'description': 'Create a mattress made for your brand and your customers’ comfort. Customize the size, firmness, materials, fabric, and branded label—with production and quality control managed from sample to final delivery.',
+            'details': [
+                'Bespoke sizing, firmness levels, and ergonomic orthopedic layering.',
+                'Premium natural latex, high-density memory foam, and pocket spring options.',
+                'Custom luxury fabrics, breathability treatments, and fire-retardant compliance.',
+                'Custom branded labels and woven luxury tags tailored for hotels, resorts, and private labels.',
+                'End-to-end production with rigorous quality control from prototype sample to bulk delivery.'
+            ],
+            'process': [
+                {'title': 'Specification', 'desc': 'Defining dimensions, firmness, core materials, and custom branding.'},
+                {'title': 'Sample & QC', 'desc': 'Crafting initial prototypes and testing for durability and comfort.'},
+                {'title': 'Production', 'desc': 'Precision manufacturing and prompt delivery to your facility.'}
+            ],
+            'gallery': [
+                '/static/main/images/custom_mattress_gal1.jpg',
+                '/static/main/images/custom_mattress_logo.jpg',
+                '/static/main/images/custom_mattress_gal3.jpg'
+            ]
         }
     }
     
@@ -239,23 +262,22 @@ def _get_email_base(content_html):
 
     <!-- Header with brand color -->
     <tr>
-        <td style="background-color:#0a2c1c;padding:50px 40px;text-align:center;">
-            <!-- Symmetrical Branded Logo (Equal Gaps, Bulletproof) -->
-            <img src="cid:logo_cid"
-     alt="3Squares Logo"
-     width="180"
-     style="display:block; margin:0 auto;" />
+        <td style="background-color:#0a2c1c;padding:35px 40px;text-align:center;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <img src="cid:logo_img" alt="3Squares" width="70" height="70" style="display:block;margin:0 auto 12px auto;width:70px;height:70px;object-fit:contain;" />
+                    <span style="font-family:'Segoe UI',Arial,sans-serif;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:4px;text-transform:uppercase;display:block;">3SQUARES</span>
+                    <span style="font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:3px;text-transform:uppercase;margin-top:4px;display:block;">INTERIOR DESIGN</span>
+                </td>
+            </tr>
+            </table>
         </td>
     </tr>
 
-    <!-- Thin accent line -->
+    <!-- Body content -->
     <tr>
-        <td style="height:4px;background:linear-gradient(90deg,#0a2c1c,#3cb371,#0a2c1c);"></td>
-    </tr>
-
-    <!-- Content area -->
-    <tr>
-        <td style="padding:40px 40px 30px 40px;">
+        <td style="padding:40px 40px 30px 40px;line-height:1.7;">
             {content_html}
         </td>
     </tr>
@@ -267,7 +289,7 @@ def _get_email_base(content_html):
             <tr>
                 <td style="font-size:12px;color:#999;line-height:1.6;">
                     <strong style="color:#0a2c1c;">3Squares Interior Design</strong><br>
-                    Ajman, United Arab Emirates<br>
+                    Dubai, United Arab Emirates<br>
                     <a href="mailto:3squaresid@gmail.com" style="color:#0a2c1c;text-decoration:none;">3squaresid@gmail.com</a> &nbsp;|&nbsp; +971 50 756 6995
                 </td>
             </tr>

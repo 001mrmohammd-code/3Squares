@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}3Squares{% endblock %}
-{% block description %}3Squares services: Corporate Fitouts, Coffee Shops, Kitchens, Booths, Meeting Areas, and Custom Furniture – no residential projects.{% endblock %}
+{% block description %}3Squares services: Corporate Fitouts, Commercial Projects, Coffee Shops, Kitchens, Booths, Meeting Areas, Custom Furniture, and Custom Mattresses.{% endblock %}
 
 {% block extra_head %}
     <style>
@@ -30,7 +30,7 @@
         <div class="container" style="position: relative; z-index: 2;">
             <h2 class="subtitle animate-on-scroll slide-up">Our Expertise</h2>
             <h1 class="title animate-on-scroll slide-up staggered">Services &amp; Products</h1>
-            <p class="description animate-on-scroll slide-up staggered">Corporate fitouts, coffee shops, kitchens, booths, meeting areas &amp; furniture — built for business, not houses.</p>
+            <p class="description animate-on-scroll slide-up staggered">Corporate fitouts, coffee shops, commercial kitchens, booths, custom furniture &amp; bespoke mattresses — built for business excellence.</p>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
                     </a>
 
                     <!-- Furniture -->
-                    <a href="{% url 'service_detail' slug='custom-furniture' %}" class="service-full-card animate-on-scroll scale-in staggered" style="grid-column: span 1; text-decoration: none; display: block;">
+                    <a href="{% url 'service_detail' slug='custom-furniture' %}" class="service-full-card animate-on-scroll scale-in staggered" style="text-decoration: none; display: block;">
                         <div class="card-img">
                             <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Furniture">
                         </div>
@@ -132,6 +132,18 @@
                             <span class="card-tag">Furniture</span>
                             <h3 class="card-title">Custom Furniture</h3>
                             <p class="card-desc">Bespoke furniture pieces crafted to complement your space — from reception desks and custom shelving to statement lounge seating and acoustic panels.</p>
+                        </div>
+                    </a>
+
+                    <!-- Custom Mattresses -->
+                    <a href="{% url 'service_detail' slug='custom-mattresses' %}" class="service-full-card animate-on-scroll scale-in staggered" style="text-decoration: none; display: block;">
+                        <div class="card-img">
+                            <img src="{% static 'main/images/custom_mattress_logo.jpg' %}" alt="Custom Mattresses" style="object-position: center 85%;">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">Hospitality &amp; Luxury</span>
+                            <h3 class="card-title">Custom Mattresses</h3>
+                            <p class="card-desc">Create a mattress made for your brand and your customers’ comfort. Customize size, firmness, materials, fabric, and branded label—with end-to-end production.</p>
                         </div>
                     </a>
 

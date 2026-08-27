@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}3Squares{% endblock %}</title>
     <meta name="description" content="{% block description %}Premium interior design and fit-out services for corporate environments.{% endblock %}">
-    <link rel="stylesheet" href="{% static 'main/shared.css' %}?v=3">
+    <link rel="stylesheet" href="{% static 'main/shared.css' %}?v=4">
     <link rel="icon" type="image/png" href="{% static 'main/images/favicon.png' %}?v=2">
     <link rel="shortcut icon" type="image/png" href="{% static 'main/images/favicon.png' %}?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -53,12 +53,13 @@
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
-                <a href="{% url 'services' %}">Corporate Fitouts</a>
-                <a href="{% url 'services' %}">Coffee Shops</a>
-                <a href="{% url 'services' %}">Kitchens</a>
-                <a href="{% url 'services' %}">Meeting Areas</a>
-                <a href="{% url 'services' %}">Event Booths</a>
-                <a href="{% url 'services' %}">Furniture</a>
+                <a href="{% url 'service_detail' slug='corporate-fitouts' %}">Corporate Fitouts</a>
+                <a href="{% url 'service_detail' slug='coffee-shops' %}">Coffee Shops</a>
+                <a href="{% url 'service_detail' slug='commercial-kitchens' %}">Commercial Kitchens</a>
+                <a href="{% url 'service_detail' slug='meeting-areas' %}">Meeting Areas</a>
+                <a href="{% url 'service_detail' slug='event-booths' %}">Event Booths</a>
+                <a href="{% url 'service_detail' slug='custom-furniture' %}">Custom Furniture</a>
+                <a href="{% url 'service_detail' slug='custom-mattresses' %}">Custom Mattresses</a>
             </div>
             <div class="footer-col">
                 <h4>Contact Us</h4>
@@ -68,20 +69,25 @@
                 </div>
                 <div class="footer-contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+971507566995">+971 55 208 2041</a>
+                    <a href="tel:+971552082041">+971 55 208 2041</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/971552082041" target="_blank" rel="noopener noreferrer">+971 55 208 2041</a>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Ajman, United Arab Emirates</span>
+                    <span>Dubai, United Arab Emirates</span>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fa-solid fa-clock"></i>
                     <span>Mon – Fri: 9 AM – 6 PM<br>Weekend: Appointment</span>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61572071716237" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/3squaresdesigns?igsh=MWdpMm5kN2F3dDc3NA==" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="mailto:3squaresid@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/971552082041" target="_blank" rel="noopener noreferrer" class="social-icon social-whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61572071716237" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/3squaresdesigns?igsh=MWdpMm5kN2F3dDc3NA==" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:3squaresid@gmail.com" class="social-icon" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -89,6 +95,15 @@
             <p>&copy; 2026 3Squares Interior Design. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/971552082041" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+        <div class="whatsapp-tooltip">Chat with us</div>
+        <div class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-pulse"></span>
+        </div>
+    </a>
 
     <script src="{% static 'main/shared.js' %}?v=3"></script>
     {% block extra_js %}{% endblock %}
