@@ -231,8 +231,8 @@ def service_detail(request, slug):
             ],
             'gallery': [
                 '/static/main/images/custom_mattress_gal1.jpg',
-                '/static/main/images/custom_mattress_logo.jpg',
-                '/static/main/images/custom_mattress_gal3.jpg'
+                '/static/main/images/custom_mattress_gal3.jpg',
+                '/static/main/images/custom_mattress_foam.png'
             ]
         }
     }
